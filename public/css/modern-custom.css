@@ -1,0 +1,139 @@
+/* Modern UI/UX Custom Styles */
+
+body {
+    background: #f7f9fb;
+    animation: fadeInBody 0.7s;
+}
+
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.card, .small-box, .navbar, .modal-content {
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07), 0 1.5px 4px 0 rgba(0,0,0,0.03);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    transition: box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+
+.btn, .small-box-footer, .nav-link, .dropdown-item {
+    transition: all 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+.btn:hover, .small-box-footer:hover, .nav-link:hover, .dropdown-item:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    opacity: 0.92;
+}
+
+.small-box {
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem 1rem 1rem 1rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #f8fafc 60%, #e3e9f7 100%);
+}
+
+.small-box.bg-info {
+    background: linear-gradient(135deg, #36d1c4 0%, #5b86e5 100%) !important;
+    color: #fff !important;
+}
+.small-box.bg-success {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%) !important;
+    color: #fff !important;
+}
+.small-box.bg-warning {
+    background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%) !important;
+    color: #fff !important;
+}
+.small-box.bg-danger {
+    background: linear-gradient(135deg, #f857a6 0%, #ff5858 100%) !important;
+    color: #fff !important;
+}
+
+.small-box .icon {
+    top: 10px;
+    right: 10px;
+    font-size: 3.5rem;
+    opacity: 0.18;
+    color: rgba(255,255,255,0.7) !important;
+}
+
+.small-box .small-box-footer {
+    color: #fff !important;
+    background: rgba(0,0,0,0.08);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.card {
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.7s;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: none; }
+}
+
+/* Animate modals and dropdowns */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), opacity 0.3s cubic-bezier(.4,0,.2,1);
+    transform: translateY(40px);
+    opacity: 0;
+}
+.modal.fade.show .modal-dialog {
+    transform: none;
+    opacity: 1;
+}
+.dropdown-menu {
+    transition: opacity 0.2s cubic-bezier(.4,0,.2,1), transform 0.2s cubic-bezier(.4,0,.2,1);
+    opacity: 0;
+    transform: translateY(10px);
+}
+.dropdown-menu.show {
+    opacity: 1;
+    transform: none;
+}
+
+/* Responsive improvements */
+@media (max-width: 767.98px) {
+    .main-sidebar, .sidebar {
+        border-radius: 0 0 1rem 1rem !important;
+    }
+    .content-header h1 {
+        font-size: 1.3rem;
+    }
+    .card, .small-box {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Sticky detail button for mobile table */
+@media (max-width: 767.98px) {
+    .detail-btn-cell {
+        position: sticky;
+        right: 0;
+        background: #fff;
+        z-index: 2;
+    }
+    .detail-btn {
+        min-width: 80px;
+        font-size: 0.95rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+}
+
+/* Font Awesome 5 support */
+.fa, .fas, .far, .fal, .fab {
+    font-family: 'Font Awesome 5 Free';
+}
