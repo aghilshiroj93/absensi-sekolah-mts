@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>NIP</label>
-                            <input type="text" name="nip" class="form-control" value="{{ old('nip') }}" required>
+                            <input type="number" name="nip" class="form-control" value="{{ old('nip') }}" required>
                         </div>
 
                         <div class="form-group">
